@@ -112,8 +112,8 @@ def load_diagnoses_xml(xml):
 
         if any([res["code"].lower() == code.lower() for res in result]):
             errors.append(f"'{code}' is already present in the list")
-        elif len(code) > 6:
-            errors.append(f"Code cannot be longer than 6 characters: '{code}'")
+        elif len(code) > 9:
+            errors.append(f"Code cannot be longer than 8 characters: '{code}'")
         elif len(name) > 255:
             errors.append(f"Name cannot be longer than 255 characters: '{name}'")
         else:
